@@ -180,12 +180,20 @@ header h1, .site-footer p {
   }
 
   .step {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Asigurăm că butoanele sunt pe o coloană pe mobil */
+    align-items: flex-start; /* Aliniem butoanele la stânga */
+    padding-left: 10px; /* Oferim puțin spațiu pe partea stângă */
+    margin-bottom: 2em; /* Mai mult spațiu între pași */
+  }
+
+  .step .content p {
+    font-size: 1em; /* Asigurăm un font mai mic pe mobil */
+    line-height: 1.4em;
   }
 
   .circle {
     margin-bottom: 1em;
+    font-size: 1.2em;
   }
 
   .benefits-list {
@@ -199,6 +207,10 @@ header h1, .site-footer p {
   }
   .main-content {
     padding: 1em; /* Reducerea padding-ului pentru a economisi spațiu pe mobil */
+  }
+
+  .important-section p {
+    font-size: 1.2em; /* Text mai mare pentru mobil */
   }
 
   .cta-btn {

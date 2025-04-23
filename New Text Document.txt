@@ -12,12 +12,6 @@
     <h1 class="slogan">Certificatul de conformitate, fără drumuri și fără bătăi de cap.</h1>
   </header>
 
-  <!-- Butonul de scroll -->
-
-  <button id="scrollToTopBtn" title="Mergi în susul paginii"> ↑ </button>
-
-
-
   <main class="main-content">
     <h2>Obține certificatul de conformitate online</h2>
     <p>Fără stres, fără cozi. Trimite cererea online și ne ocupăm noi de tot.</p>
@@ -74,6 +68,22 @@
     <p>&copy; 2025 CoC Express. Toate drepturile rezervate.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- JavaScript pentru animarea pașilor -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const steps = document.querySelectorAll('.animated-step');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  steps.forEach(step => observer.observe(step));
+});
+  </script>
 </body>
 </html>

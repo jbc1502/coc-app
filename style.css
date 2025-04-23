@@ -238,3 +238,25 @@ header h1, .site-footer p {
   padding: 1em;
   text-align: center;
 }
+
+
+/*Buton scroll up*/
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  display: none; /* Inițial ascuns */
+  z-index: 1000;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #0056b3;
+}

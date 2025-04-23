@@ -176,7 +176,7 @@ header h1, .site-footer p {
 /* Media Queries pentru dispozitive mobile */
 @media (max-width: 768px) {
   .timeline {
-    padding: 1.5em;
+    padding: 1em;
   }
 
   .step {

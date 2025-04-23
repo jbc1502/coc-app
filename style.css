@@ -176,7 +176,7 @@ header h1, .site-footer p {
 /* Media Queries pentru dispozitive mobile */
 @media (max-width: 768px) {
   .timeline {
-    padding: 1em;
+    padding: 1.2em;
   }
 
   .step {
@@ -193,7 +193,7 @@ header h1, .site-footer p {
 
   .circle {
     margin-bottom: 1em;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .benefits-list {

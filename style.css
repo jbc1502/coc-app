@@ -94,6 +94,7 @@ header h1, .site-footer p {
   padding: 2em;
   background-color: #e6f1fc;
   border-radius: 10px;
+  text-align: center;
 }
 
 .timeline h3 {
@@ -164,36 +165,38 @@ header h1, .site-footer p {
   font-size: 1.1em;
   line-height: 1.4em;
 }
-
-/* Footer */
-.site-footer {
-  margin-top: 4em;
-  text-align: center;
-  background-color: #eee;
-  padding: 1em;
+.step::before {
+  display: none; /* Eliminăm linia care se află între pași */
 }
 
 /* Media Queries pentru dispozitive mobile */
 @media (max-width: 768px) {
   .timeline {
-    padding: 1.2em;
+    padding: 1.5em;
   }
 
   .step {
-    flex-direction: column; /* Asigurăm că butoanele sunt pe o coloană pe mobil */
-    align-items: flex-start; /* Aliniem butoanele la stânga */
-    padding-left: 10px; /* Oferim puțin spațiu pe partea stângă */
-    margin-bottom: 2em; /* Mai mult spațiu între pași */
+    flex-direction: row; /* Asigurăm că pașii sunt pe orizontală pe mobil */
+    align-items: center; /* Aliniem cercul și textul pe axa verticală */
+    margin-bottom: 1.5em; /* Spațiu mai mare între pași */
+  }
+
+  .step .content {
+    text-align: left; /* Aliniem textul la stânga */
+    font-size: 1em; /* Asigurăm că textul nu devine prea mare pe mobil */
   }
 
   .step .content p {
-    font-size: 1em; /* Asigurăm un font mai mic pe mobil */
-    line-height: 1.4em;
+    margin: 0; /* Eliminăm marginile pentru textul din pași */
   }
 
+  .step .circle {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em; /* Mărim puțin fontul pentru numere */
+  }
   .circle {
-    margin-bottom: 1em;
-    font-size: 1em;
+    margin-bottom: 0.5em;
   }
 
   .benefits-list {
@@ -203,21 +206,7 @@ header h1, .site-footer p {
 
   .benefits-list div {
     text-align: center;
-    min-width: 100%;
   }
-  .main-content {
-    padding: 1em; /* Reducerea padding-ului pentru a economisi spațiu pe mobil */
-  }
-
-  .important-section p {
-    font-size: 1.2em; /* Text mai mare pentru mobil */
-  }
-
-  .cta-btn {
-    width: 100%; /* Întinde butonul pe toată lățimea ecranului */
-    padding: 1em; /* Adaugă mai mult spațiu pe laturi */
-  }
-
 }
 
 /* Animație pentru pașii din timeline */

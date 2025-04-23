@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificatul de Conformitate Auto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="slogan">Certificatul de conformitate, fără drumuri și fără bătăi de cap.</h1>
+  </header>
+
+  <main class="main-content">
+    <h2>Obține certificatul de conformitate online</h2>
+    <p>Fără stres, fără cozi. Trimite cererea online și ne ocupăm noi de tot.</p>
+    <a href="formular.html" class="cta-btn" target="_blank">Începe acum</a>
+
+    <section class="important-section">
+      <h3>De ce ai nevoie de acest certificat?</h3>
+      <p style="max-width: 600px; margin: auto; line-height: 1.6em;">
+        Dacă aduci o mașină din străinătate, certificatul de conformitate este <strong>obligatoriu</strong> pentru a o înmatricula în România. <br>
+        Acest document atestă că vehiculul tău respectă standardele de siguranță și emisii din Uniunea Europeană. <br>
+        Fără el, RAR nu îți poate elibera Cartea de Identitate a Vehiculului (CIV), iar înmatricularea devine imposibilă sau mult mai complicată.
+      </p>
+    </section>
+
+    <section class="timeline">
+      <h3>3 pași simpli</h3>
+      <div class="step animated-step step-1">
+        <div class="circle">1</div>
+        <div class="content">
+          <p><i class="fas fa-clipboard-check"></i> <strong>Completează formularul online.</strong></p>
+        </div>
+      </div>
+      <div class="step animated-step step-2">
+        <div class="circle">2</div>
+        <div class="content">
+          <p><i class="fas fa-truck"></i> <strong>Îți trimitem certificatul prin curier.</strong></p>
+        </div>
+      </div>
+      <div class="step animated-step step-3">
+        <div class="circle">3</div>
+        <div class="content">
+          <p><i class="fas fa-check-circle"></i> <strong>Primești certificatul în câteva zile.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-section">
+      <h3>De ce să alegi serviciul nostru?</h3>
+      <div class="benefits-list">
+        <div>
+          <p>⚡ <strong>Rapid și simplu</strong><br>Completarea durează doar câteva minute</p>
+        </div>
+        <div>
+          <p>🚗 <strong>Fără drumuri</strong><br>Totul se face 100% online</p>
+        </div>
+        <div>
+          <p>📞 <strong>Consultanță inclusă</strong><br>Te ajutăm pas cu pas</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 CoC Express. Toate drepturile rezervate.</p>
+  </footer>
+
+  <!-- JavaScript pentru animarea pașilor -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const steps = document.querySelectorAll('.animated-step');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  steps.forEach(step => observer.observe(step));
+});
+  </script>
+</body>
+</html>

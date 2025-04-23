@@ -1,0 +1,229 @@
+/* Resetare stiluri implicite */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stiluri generale */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh; /* Setează înălțimea minimă pentru a acoperi întreaga fereastră */
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0; /* Elimină padding-ul care ar putea crea spațiu inutil */
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #003366, #0066cc);  /* Gradient între două nuanțe de albastru */
+  color: white;
+  text-align: center;
+  padding: 1em 2em;
+}
+
+header h1, .site-footer p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Umbră subtilă pentru text */
+}
+
+.slogan {
+  font-size: 1.8em;
+  font-style: italic;
+  margin-top: 0.5em;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Animație pentru slogan */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Main content */
+.main-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2em;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Buton CTA */
+.cta-btn {
+  background-color: #ff7a00;
+  padding: 0.8em 1.6em;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.5em;
+}
+
+.cta-btn:hover {
+  background-color: #e46600;
+}
+
+/* Secțiune importantă */
+.important-section {
+  background-color: #fff3e6;
+  margin-top: 3em;
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.important-section h3 {
+  margin-bottom: 1em;
+}
+
+/* Timeline */
+.timeline {
+  max-width: 600px;
+  margin: 3em auto;
+  padding: 2em;
+  background-color: #e6f1fc;
+  border-radius: 10px;
+}
+
+.timeline h3 {
+  margin-bottom: 2em;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #ff7a00;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  margin-right: 1em;
+  flex-shrink: 0;
+}
+
+.content p {
+  margin: 0;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+.step::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 14px;
+  width: 2px;
+  height: calc(100% - 30px);
+  background-color: #ccc;
+  z-index: 0;
+}
+
+.step:last-child::before {
+  display: none;
+}
+
+/* Beneficii */
+.benefits-section {
+  margin-top: 3em;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 1em;
+}
+
+.benefits-list div {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.benefits-list div p {
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 4em;
+  text-align: center;
+  background-color: #eee;
+  padding: 1em;
+}
+
+/* Media Queries pentru dispozitive mobile */
+@media (max-width: 768px) {
+  .timeline {
+    padding: 1.5em;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .circle {
+    margin-bottom: 1em;
+  }
+
+  .benefits-list {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .benefits-list div {
+    text-align: center;
+  }
+}
+
+/* Animație pentru pașii din timeline */
+@keyframes fadeInStep {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animated-step.in-view {
+  animation: fadeInStep 1s ease-out forwards;
+}
+
+/* Clearfix pentru secțiunile care se află înainte de footer */
+.main-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.site-footer {
+  background: linear-gradient(to right, #003366, #0066cc);  /* Gradient între două nuanțe de albastru */
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
